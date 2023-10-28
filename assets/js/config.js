@@ -130,14 +130,17 @@ const
 // Configure external links to appear at the bottom of the page. Displayed only if externalLinksBar (above) is true
 const linkSets = [
     {
-        label: ,
+        label: "",
         links: [
-            
+		{
+		}            
         ]
     },
     {
-        label: ,
+        label: "",
         links: [
+		{
+		}
         ]
     }
 ];
@@ -163,7 +166,8 @@ setupGraphAnalytics();
 let headerLogoText = "ElectroShock Audio",
     headerLogoImgUrl = "assets/images/ESA.svg",
     headerLinks = [
-	
+	{
+	}	
 ];
 
 // Source: https://www.teachmeaudio.com/mixing/techniques/audio-spectrum
