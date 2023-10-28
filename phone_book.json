@@ -1,7 +1,9 @@
 [
 {
 	"name": "Floaudio"
-	"phones": [ "Lily"
+	"phones": [ "index": 0,
+                "name": "Lily",
+                "file": "Floaudio Lily"
 	]
 }
 ]
