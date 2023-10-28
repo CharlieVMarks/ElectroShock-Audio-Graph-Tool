@@ -42,8 +42,7 @@ const init_phones = ["Generic DF HRTF Target","Floaudio Lily"],// Optional. Whic
 
 // Specify which targets to display
 const targets = [
-    { type:"Reference", files:["Generic DF HRTF"] },
-    { type:"Preference", files:["Harman IE 2019v2","Harman IE 2017v2"] }
+    { type:"Reference", files:["Generic DF HRTF"] }
 ];
 
 
@@ -133,6 +132,8 @@ const linkSets = [
         label: "",
         links: [
 		{
+			name: "",
+			url: "",
 		}            
         ]
     },
@@ -141,6 +142,8 @@ const linkSets = [
         links: [
 		{
 		}
+			name: "",
+			url: "",
         ]
     }
 ];
@@ -167,6 +170,8 @@ let headerLogoText = "ElectroShock Audio",
     headerLogoImgUrl = "assets/images/ESA.svg",
     headerLinks = [
 	{
+		name: "",
+		url: ""
 	}	
 ];
 
