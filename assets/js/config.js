@@ -42,7 +42,8 @@ const init_phones = ["Generic DF HRTF Target","Floaudio Lily"],// Optional. Whic
 
 // Specify which targets to display
 const targets = [
-    { type:"Reference", files:["Generic DF HRTF"] }
+    { type:"Reference", files:["Generic DF HRTF Target"] },
+	{ type:"Preference", files:["Harman IE 2017v2", "Harman IE 2019v2"] }
 ];
 
 
