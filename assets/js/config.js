@@ -1,10 +1,10 @@
 // Configuration options
-const init_phones = ["Haruto Target","Elysian Annihilator (2023)"],// Optional. Which graphs to display on initial load. Note: Share URLs will override this set
+const init_phones = ["Generic DF HRTF Target","Floaudio Lily"],// Optional. Which graphs to display on initial load. Note: Share URLs will override this set
       DIR = "data/",                                // Directory where graph files are stored
       default_channels = ["L","R"],                 // Which channels to display. Avoid javascript errors if loading just one channel per phone
       default_normalization = "dB",                 // Sets default graph normalization mode. Accepts "dB" or "Hz"
-      default_norm_db = 60,                         // Sets default dB normalization point
-      default_norm_hz = 1000,                        // Sets default Hz normalization point (500Hz is recommended by IEC)
+      default_norm_db = 40,                         // Sets default dB normalization point
+      default_norm_hz = 630,                        // Sets default Hz normalization point (500Hz is recommended by IEC)
       max_channel_imbalance = 5,                    // Channel imbalance threshold to show ! in the channel selector
       alt_layout = true,                            // Toggle between classic and alt layouts
       alt_sticky_graph = true,                      // If active graphs overflows the viewport, does the graph scroll with the page or stick to the viewport?
@@ -13,10 +13,10 @@ const init_phones = ["Haruto Target","Elysian Annihilator (2023)"],// Optional. 
       alt_tutorial = true,                          // Display a configurable frequency response guide below the graph
       site_url = '/',                               // URL of your graph "homepage"
       share_url = true,                             // If true, enables shareable URLs
-      watermark_text = "HarutoHiroki",              // Optional. Watermark appears behind graphs
-      watermark_image_url = "assets/images/haruto.svg",   // Optional. If image file is in same directory as config, can be just the filename
-      page_title = "HarutoHiroki",                  // Optional. Appended to the page title if share URLs are enabled
-      page_description = "View and compare frequency response graphs for earphones",
+      watermark_text = "",              // Optional. Watermark appears behind graphs
+      watermark_image_url = "assets/images/ESA.svg",   // Optional. If image file is in same directory as config, can be just the filename
+      page_title = "ElectroShock Audio",                  // Optional. Appended to the page title if share URLs are enabled
+      page_description = "View and compare frequency response graphs for transducers measured by ElectroShock Audio",
       accessories = true,                           // If true, displays specified HTML at the bottom of the page. Configure further below
       externalLinksBar = true,                      // If true, displays row of pill-shaped links at the bottom of the page. Configure further below
       expandable = false,                           // Enables button to expand iframe over the top of the parent page
@@ -35,19 +35,15 @@ const init_phones = ["Haruto Target","Elysian Annihilator (2023)"],// Optional. 
       extraEQBandsMax = 20,                         // Max EQ bands available
       extraToneGeneratorEnabled = true,             // Enable tone generator function
       PHONE_BOOK = "/phone_book.json",              // Path to JSON file containing phone metadata
-      default_bass_shelf = 8,                       // Default Custom DF bass shelf value
-      default_tilt = -0.8,                          // Default Custom DF tilt value
+      default_bass_shelf = 3,                       // Default Custom DF bass shelf value
+      default_tilt = -1.0,                          // Default Custom DF tilt value
       default_DF_name = "Diffuse Field",            // Default RAW DF name
       dfBaseline = true;                            // If true, DF is used as baseline when custom df tilt is on
 
 // Specify which targets to display
 const targets = [
-    { type:"Reference", files:["Haruto", "Haruto 🅱️ass"] },
-    { type:"Neutral",    files:["Diffuse Field","Etymotic","Free Field","IEF Neutral"] },
-    { type:"Reviewer",   files:["Antdroid","Banbeucmas","HBB","Precogvision","Super Review 22","Super Review 21","Timmy","VSG"] },
-//  { type:"Compensation", files:["Oratory1990 Comp"]},
-    { type:"IEF Members", files:["Brownie", "Brownie Unsmoothened", "Listener (No Bass Shelf)", "Rennsport"]},
-    { type:"Preference", files:["Harman IE 2019v2","Harman IE 2017v2","AutoEQ","Rtings","Sonarworks"] }
+    { type:"Reference", files:["Generic DF HRTF"] },
+    { type:"Preference", files:["Harman IE 2019v2","Harman IE 2017v2"] }
 ];
 
 
@@ -80,7 +76,7 @@ function watermark(svg) {
         .attr("opacity",0.2)
         .append("text")
         .attrs({x:765, y:314, "font-size":10, "text-anchor":"end", "class":"site_name"})
-        .text("graphtool.harutohiroki.com");
+        .text("electroshockaudio.github.io");
 }
 
 
@@ -134,61 +130,14 @@ const
 // Configure external links to appear at the bottom of the page. Displayed only if externalLinksBar (above) is true
 const linkSets = [
     {
-        label: "IEM graph databases",
+        label: ,
         links: [
-            {
-                name: "Audio Discourse",
-                url: "https://iems.audiodiscourse.com/"
-            },
-            {
-                name: "Bad Guy",
-                url: "https://hbb.squig.link/"
-            },
-            {
-                name: "Banbeucmas",
-                url: "https://banbeu.com/graph/tool/"
-            },
-            {
-                name: "HypetheSonics",
-                url: "https://www.hypethesonics.com/iemdbc/"
-            },
-            {
-                name: "In-Ear Fidelity",
-                url: "https://crinacle.com/graphs/iems/graphtool/"
-            },
-            {
-                name: "Precogvision",
-                url: "https://precog.squig.link/"
-            },
-            {
-                name: "Super* Review",
-                url: "https://squig.link/"
-            },
-            {
-                name: "Timmy (Gizaudio)",
-                url: "https://timmyv.squig.link/"
-            },
-            {
-                name: "Rohsa",
-                url: "https://rohsa.gitlab.io/graphtool/"
-            },
+            
         ]
     },
     {
-        label: "Headphones",
+        label: ,
         links: [
-            {
-                name: "Audio Discourse",
-                url: "https://headphones.audiodiscourse.com/"
-            },
-            {
-                name: "In-Ear Fidelity",
-                url: "https://crinacle.com/graphs/headphones/graphtool/"
-            },
-            {
-                name: "Super* Review",
-                url: "https://squig.link/hp.html"
-            }
         ]
     }
 ];
@@ -211,29 +160,10 @@ setupGraphAnalytics();
 
 
 // If alt_header is enabled, these are the items added to the header
-let headerLogoText = "HarutoHiroki",
-    headerLogoImgUrl = "assets/images/haruto.svg",
+let headerLogoText = "ElectroShock Audio",
+    headerLogoImgUrl = "assets/images/ESA.svg",
     headerLinks = [
-    {
-        name: "Home",
-        url: "https://harutohiroki.com"
-    },
-    {
-        name: "Ranking",
-        url: "https://docs.google.com/spreadsheets/d/1DZTac1BxCLdmS2J4DDQyvKSVUZGnNhz2r86qMGcs_Jo/edit?pli=1#gid=330037169"
-    },
-    {
-        name: "Discord",
-        url: "https://discord.harutohiroki.com"
-    },
-    {
-        name: "Donate",
-        url: "https://www.paypal.me/harutohirokiUS"
-    },
-//  {
-//      name: "GitHub",
-//      url: "https://github.com/HarutoHiroki"
-//  },
+	
 ];
 
 // Source: https://www.teachmeaudio.com/mixing/techniques/audio-spectrum
