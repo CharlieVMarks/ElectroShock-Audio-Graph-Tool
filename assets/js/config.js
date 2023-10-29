@@ -42,7 +42,12 @@ const init_phones = ["Generic DF HRTF Target","Floaudio Lily"],// Optional. Whic
 
 // Specify which targets to display
 const targets = [
-    { type:"Reference", files:["Generic DF HRTF"] }
+    { type:"Reference", files:["Haruto", "Haruto 🅱️ass"] },
+    { type:"Neutral",    files:["Diffuse Field","Etymotic","Free Field","IEF Neutral"] },
+    { type:"Reviewer",   files:["Antdroid","Banbeucmas","HBB","Precogvision","Super Review 22","Super Review 21","Timmy","VSG"] },
+//  { type:"Compensation", files:["Oratory1990 Comp"]},
+    { type:"IEF Members", files:["Brownie", "Brownie Unsmoothened", "Listener (No Bass Shelf)", "Rennsport"]},
+    { type:"Preference", files:["Harman IE 2019v2","Harman IE 2017v2","AutoEQ","Rtings","Sonarworks"] }
 ];
 
 
