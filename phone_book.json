@@ -1,10 +1,11 @@
 [
-{
-	"name": "Floaudio"
-	"phones": [
-		{	"name": "Lily",
-            "file": "Floaudio Lily"
-		}
-	]
-}
+  {
+    "name": "Floaudio",
+    "phones": [
+      {
+        "name": "Lily",
+        "file": "Floaudio Lily"
+      }
+    ]
+  }
 ]
