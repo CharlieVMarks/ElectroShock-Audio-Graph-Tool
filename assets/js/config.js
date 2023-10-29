@@ -43,8 +43,6 @@ const init_phones = ["Generic DF HRTF Target"],// Optional. Which graphs to disp
 // Specify which targets to display
 const targets = [
     { type:"Reference", files:["Generic DF HRTF"] },
-    { type:"Neutral",    files:[""] },
-    { type:"Reviewer",   files:[""] },
     { type:"IEF Members", files:["Listener (No Bass Shelf)"]},
     { type:"Preference", files:["Harman IE 2019v2","Harman IE 2017v2"] }
 ];
@@ -133,19 +131,19 @@ const
 // Configure external links to appear at the bottom of the page. Displayed only if externalLinksBar (above) is true
 const linkSets = [
     {
-        label: "",
+        label: ,
         links: [
             {
-                name: "",
+                name: ,
                 url: ""
             }
         ]
     },
     {
-        label: "",
+        label: ,
         links: [
             {
-                name: "",
+                name: ,
                 url: ""
             }
         ]
