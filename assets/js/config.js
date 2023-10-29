@@ -9,7 +9,7 @@ const init_phones = ["Generic DF HRTF Target"],// Optional. Which graphs to disp
       alt_layout = true,                            // Toggle between classic and alt layouts
       alt_sticky_graph = true,                      // If active graphs overflows the viewport, does the graph scroll with the page or stick to the viewport?
       alt_animated = true,                          // Determines if new graphs are drawn with a 1-second animation, or appear instantly
-      alt_header = true,                            // Display a configurable header at the top of the alt layout
+      alt_header = false,                            // Display a configurable header at the top of the alt layout
       alt_tutorial = true,                          // Display a configurable frequency response guide below the graph
       site_url = '/',                               // URL of your graph "homepage"
       share_url = true,                             // If true, enables shareable URLs
@@ -18,7 +18,7 @@ const init_phones = ["Generic DF HRTF Target"],// Optional. Which graphs to disp
       page_title = "ElectroShock Audio Graph Tool",                  // Optional. Appended to the page title if share URLs are enabled
       page_description = "View and compare frequency response graphs for earphones measured by Electroshock Audio.",
       accessories = true,                           // If true, displays specified HTML at the bottom of the page. Configure further below
-      externalLinksBar = true,                      // If true, displays row of pill-shaped links at the bottom of the page. Configure further below
+      externalLinksBar = false,                      // If true, displays row of pill-shaped links at the bottom of the page. Configure further below
       expandable = false,                           // Enables button to expand iframe over the top of the parent page
       expandableOnly = false,                       // Prevents iframe interactions unless the user has expanded it. Accepts "true" or "false" OR a pixel value; if pixel value, that is used as the maximum width at which expandableOnly is used
       headerHeight = '0px',                         // Optional. If expandable=true, determines how much space to leave for the parent page header
