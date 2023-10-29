@@ -35,14 +35,14 @@ const init_phones = ["JM-1 Target"],// Optional. Which graphs to display on init
       extraEQBandsMax = 20,                         // Max EQ bands available
       extraToneGeneratorEnabled = true,             // Enable tone generator function
       PHONE_BOOK = "./phone_book.json",              // Path to JSON file containing phone metadata
-      default_bass_shelf = 5,                       // Default Custom DF bass shelf value
+      default_bass_shelf = 0,                       // Default Custom DF bass shelf value
       default_tilt = -1.0,                          // Default Custom DF tilt value
       default_DF_name = "JM-1",            // Default RAW DF name
       dfBaseline = true;                            // If true, DF is used as baseline when custom df tilt is on
 
 // Specify which targets to display
 const targets = [
-    { type:"Reference", files:["Generic DF HRTF", "JM-1"] },
+    { type:"Reference", files:["JM-1","Generic DF HRTF"] },
     { type:"Community Targets", files:["Listener (No Bass Shelf)"]},
     { type:"Preference", files:["Harman IE 2019v2","Harman IE 2017v2"] }
 ];
