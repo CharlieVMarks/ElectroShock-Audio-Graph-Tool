@@ -1,5 +1,5 @@
 // Configuration options
-const init_phones = ["Generic DF HRTF Target"],// Optional. Which graphs to display on initial load. Note: Share URLs will override this set
+const init_phones = ["JM-1 Target"],// Optional. Which graphs to display on initial load. Note: Share URLs will override this set
       DIR = "data/",                                // Directory where graph files are stored
       default_channels = ["L","R"],                 // Which channels to display. Avoid javascript errors if loading just one channel per phone
       default_normalization = "dB",                 // Sets default graph normalization mode. Accepts "dB" or "Hz"
@@ -37,13 +37,13 @@ const init_phones = ["Generic DF HRTF Target"],// Optional. Which graphs to disp
       PHONE_BOOK = "./phone_book.json",              // Path to JSON file containing phone metadata
       default_bass_shelf = 5,                       // Default Custom DF bass shelf value
       default_tilt = -1.0,                          // Default Custom DF tilt value
-      default_DF_name = "Generic DF HRTF",            // Default RAW DF name
+      default_DF_name = "JM-1",            // Default RAW DF name
       dfBaseline = true;                            // If true, DF is used as baseline when custom df tilt is on
 
 // Specify which targets to display
 const targets = [
-    { type:"Reference", files:["Generic DF HRTF"] },
-    { type:"IEF Members", files:["Listener (No Bass Shelf)"]},
+    { type:"Reference", files:["Generic DF HRTF", "JM-1"] },
+    { type:"Community Targets", files:["Listener (No Bass Shelf)"]},
     { type:"Preference", files:["Harman IE 2019v2","Harman IE 2017v2"] }
 ];
 
