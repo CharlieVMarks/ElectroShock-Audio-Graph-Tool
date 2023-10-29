@@ -168,8 +168,8 @@ setupGraphAnalytics();
 
 
 // If alt_header is enabled, these are the items added to the header
-let headerLogoText = "",
-    headerLogoImgUrl = "assets/images/ESA.svg",
+let headerLogoText = "ElectroShock Audio",
+    headerLogoImgUrl = "",
     headerLinks = [
     {
         name: "",
