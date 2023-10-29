@@ -131,20 +131,18 @@ const
 // Configure external links to appear at the bottom of the page. Displayed only if externalLinksBar (above) is true
 const linkSets = [
     {
-        label: ,
+        label: "",
         links: [
             {
-                name: ,
-                url: ""
+                
             }
         ]
     },
     {
-        label: ,
+        label: "",
         links: [
             {
-                name: ,
-                url: ""
+               
             }
         ]
     }
