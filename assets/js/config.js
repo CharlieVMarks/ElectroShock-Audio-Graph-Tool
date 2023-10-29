@@ -34,7 +34,7 @@ const init_phones = ["Generic DF HRTF Target"],// Optional. Which graphs to disp
       extraEQBands = 10,                            // Default EQ bands available
       extraEQBandsMax = 20,                         // Max EQ bands available
       extraToneGeneratorEnabled = true,             // Enable tone generator function
-      PHONE_BOOK = "/phone_book.json",              // Path to JSON file containing phone metadata
+      PHONE_BOOK = "./phone_book.json",              // Path to JSON file containing phone metadata
       default_bass_shelf = 5,                       // Default Custom DF bass shelf value
       default_tilt = -1.0,                          // Default Custom DF tilt value
       default_DF_name = "Generic DF HRTF",            // Default RAW DF name
@@ -170,7 +170,7 @@ setupGraphAnalytics();
 
 
 // If alt_header is enabled, these are the items added to the header
-let headerLogoText = "ElectroShock Audio",
+let headerLogoText = "",
     headerLogoImgUrl = "assets/images/ESA.svg",
     headerLinks = [
     {
